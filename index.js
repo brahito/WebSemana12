@@ -15,5 +15,9 @@ app.get('/', function(request, response){
     };
     response.render('home', contexto);
 });
+app.post('/login',function(request,response){
+console.log('hello there');
+response.send('hello there');
+});
 
 app.listen(3000);
