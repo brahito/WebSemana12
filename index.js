@@ -10,7 +10,8 @@ app.set('view engine', 'handlebars');
 
 app.get('/', function(request, response){
     var contexto = {
-        titulo: "puto el que lo lea"
+        titulo: "puto el que lo lea",
+        
     };
     response.render('home', contexto);
 });
