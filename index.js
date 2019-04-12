@@ -4,6 +4,7 @@ var exphbs = require('express-handlebars');
 var app = express();
 
 app.use(express.static('public'));
+app.use(express.urlencoded());
 
 app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
@@ -17,7 +18,7 @@ app.get('/', function(request, response){
 });
 app.post('/login',function(request,response){
 console.log('hello there');
-response.send('hello there');
+response.redirect('/bienvenido');
 });
 
 app.listen(3000);
